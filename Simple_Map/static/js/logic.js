@@ -25,8 +25,6 @@ let baseMaps = {
 let map = L.map('mapid', {
   center: [43.7, -79.3],
   zoom: 11,
-  weight:1,
-  fillColor:"yellow",
   layers: [satelliteStreets]
 })
 
@@ -39,11 +37,11 @@ L.control.layers(baseMaps).addTo(map);
 // streets.addTo(map);
 
 // Accessing the Toronto neighborhoods GeoJSON URL.
-let torontoHoods = "https://raw.githubusercontent.com/nypasha1928/Mapping_Earthquakes/main/torontoNeighborhoods.json";
+let torontoHoods = "https://raw.githubusercontent.com/nypasha1928/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json";
 
 // Create a style for the lines.
 let myStyle = {
-  color: "#ffffa1",
+  color: "#0000ff",
   weight: 2
 }
 
@@ -58,3 +56,19 @@ L.geoJson(data , {
    }
   }).addTo(map);
 });
+
+// satellite-streets-v11
+// // Get data from cities.js
+// let cityData = cities;    
+
+// // Loop through the cities array and create one marker for each city.
+// cityData.forEach(function(city) {
+//     console.log(city)
+//     L.circleMarker(city.location, {
+//        radius: city.population/100000,
+//        color: "orange",
+//        fill: "#ffa500"
+//     })
+//     .bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population + "</h3>")
+//   .addTo(map);
+// });
