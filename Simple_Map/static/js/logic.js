@@ -44,7 +44,7 @@ L.control.layers(baseMaps).addTo(map);
 // streets.addTo(map);
 
 // Accessing the airport GeoJSON URL.
-let airportData ="https://raw.githubusercontent.com/nypasha1928/Mapping_Earthquakes/main/majorAirports.json";
+let airportData ="https://raw.githubusercontent.com/nypasha1928/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/majorAirports.json";
 
 
 // Grabbing our GeoJSON data.
